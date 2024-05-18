@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>{% block title %} login {% endblock %}</h3>
+    <form method="post">
+	<fieldset class="grid">
+        <br>
+        <label for="username">Username</label>
+        <input type="text" name="Username"
+               placeholder="username"
+               value="{{ request.form['username'] }}"></input>
+        <label for="password">Password</label>
+        <input type="password" name="password"
+               placeholder=""
+               value="{{ request.form['password'] }}"></input>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

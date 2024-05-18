@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/pico.min.css">
+    <title>{% block title %} {% endblock %} - AuthApp</title>
+    <style>
+        .message {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3
+        }
+        nav a {
+            color: #0000cc;
+            font-size: medium;
+	    text-align: center;
+            margin-left: 50px;
+            margin-right: 50px;
+            text-decoration: none;
+        }
+        content {
+            color: #0000cc;
+            font-size: medium;
+	    text-align: center;
+            margin-left: 50px;
+            margin-right: 50px; 
+        }
+        text {
+            color: #0000cc;
+            font-size: medium;
+	    text-align: center;
+            margin-left: 50px;
+            margin-right: 50px; 
+        }
+        h3 { 
+            font-size: medium;
+	    text-align: center;
+            margin-left: 50px;
+            margin-right: 50px; 
+        }
+
+        .alert {
+            padding: 20px;
+            margin: 5px;
+            color: #970020;
+            background-color: #ffd5de;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">AuthApp</a>
+        <a href="{{ url_for('register') }}">Register</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="#">About</a>
+    </nav>
+<hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

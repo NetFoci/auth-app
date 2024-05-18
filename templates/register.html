@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>{% block title %} Register a New User {% endblock %}</h3>
+    <form method="post">
+	<fieldset class="grid">
+        <br>
+        <label for="username">Username</label>
+        <input type="text" name="Username"
+               placeholder="username "
+               value="{{ request.form['username'] }}"></input>
+        <br>
+        <label for="email">Email</label>
+        <input type="text" name="email"
+               placeholder="username@domain.com"
+               value="{{ request.form['email'] }}"></input>
+		</fieldset>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password"
+               placeholder="*******"
+               value="{{ request.form['password'] }}"></input>
+        <br>
+        <label for="password2">Password</label>
+        <input type="password" name="password2"
+               placeholder="*******"
+               value="{{ request.form['password'] }}"></input>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
